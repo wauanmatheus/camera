@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: url('img/fundo.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background-color: rgba(68, 53, 137, 0.8);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.logo {
+    text-align: center;
+    flex: 1;
+}
+
+.animated-logo {
+    font-size: 2.5rem;
+    animation: logoGlow 3s infinite alternate;
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(138, 43, 226, 0.5);
+}
+
+@keyframes logoGlow {
+    0% {
+        text-shadow: 0px 0px 5px rgba(138, 43, 226, 0.2);
+    }
+    100% {
+        text-shadow: 0px 0px 15px rgba(138, 43, 226, 0.7);
+    }
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+nav ul li:hover img {
+    transform: scale(1.1);
+}
+
+.icon.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* Menu Lateral */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(68, 53, 137, 0.9);
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+#sidebar.show-menu {
+    left: 0;
+}
+
+#sidebar h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#sidebar ul {
+    list-style-type: none;
+}
+
+#sidebar ul li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#sidebar ul li img {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+#sidebar ul li:hover {
+    color: #FFF;
+    background-color: #8257E6;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.close-menu {
+    font-size: 24px;
+    cursor: pointer;
+    color: #FFF;
+    margin-bottom: 30px;
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.storage-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 400px;
+}
+
+.storage-container h2 {
+    margin-bottom: 20px;
+    color: #3A2A58;
+}
+
+.camera {
+    margin-bottom: 15px;
+}
+
+.camera label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #3A2A58;
+}
+
+.camera input[type="file"] {
+    display: none;
+}
+
+.camera span {
+    display: inline-block;
+    padding: 10px;
+    background-color: #F0E6FF;
+    border: 2px solid #D6B5FA;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.camera span:hover {
+    background-color: #D6B5FA;
+    color: #FFFFFF;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    background-color: #8257E6;
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #3A2A58;
+}
+
+.success-message {
+    margin-top: 20px;
+    color: #8000ff;
+    font-weight: bold;
+    display: none;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(68, 53, 137, 0.8);
+    color: #FFF;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style App</title>
+    <link rel="stylesheet" href="camera.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <div class="logo">
+            <h1 class="animated-logo">Style</h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="icon" onclick="animateButton(this)">
+                    <img src="img/insta.png" alt="Instagram">
+                </li>
+                <li class="icon" onclick="animateButton(this)">
+                    <img src="img/github (2).png" alt="GitHub">
+                </li>
+                <li class="icon" onclick="animateButton(this)">
+                    <img src="img/perfil.png" alt="Perfil">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Menu Lateral -->
+    <aside id="sidebar">
+        <div class="close-menu" onclick="toggleMenu()">&#10005;</div>
+        <h2>Serviços</h2>
+        <ul>
+            <li>
+                <img src="img/stylebot.png" alt="StyleBot"> StyleBot
+            </li>
+            <li>
+                <img src="img/favoritos.png" alt="Favoritos"> Favoritos
+            </li>
+            <li>
+                <img src="img/combinaçoes.png" alt="Combinações"> Combinações
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <div class="storage-container">
+            <h2>Acesse seu armazenamento</h2>
+            <div class="camera">
+                <label for="camera1">1ª CÂMERA</label>
+                <input type="file" id="camera1" onchange="showFileName(this)">
+                <span id="file-name1">Nenhum arquivo escolhido</span>
+            </div>
+            <div class="camera">
+                <label for="camera2">2ª CÂMERA</label>
+                <input type="file" id="camera2" onchange="showFileName(this)">
+                <span id="file-name2">Nenhum arquivo escolhido</span>
+            </div>
+            <div class="buttons">
+                <button class="btn" onclick="showSuccess('salvar')">Salvar</button>
+                <button class="btn" onclick="showSuccess('finalizar')">Finalizar</button>
+            </div>
+            <div id="success-message" class="success-message"></div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Lookfy Corporation</p>
+    </footer>
+
+    <script src="camera.js"></script>
+</body>
+
+</html>

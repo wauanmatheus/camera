@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleBot - Assistente Virtual</title>
+    <link rel="stylesheet" href="bot.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="header">
+            <img src="img/stylebot.png" alt="StyleBot" class="logo">
+            <h1>StyleBot</h1>
+        </div>
+        <div class="chat-window" id="chat-window">
+            <div class="message bot">
+                <p>Olá! Sou o StyleBot, o assistente virtual do site Style. Estou aqui para te ajudar com tudo relacionado ao estilo e moda. Escolha uma das opções abaixo para começar:</p>
+                <ul class="options">
+                    <li onclick="handleOptionClick('O que é o Style?')">O que é o Style?</li>
+                    <li onclick="handleOptionClick('Como posso usar o Style para combinar minhas roupas?')">Como posso usar o Style para combinar minhas roupas?</li>
+                    <li onclick="handleOptionClick('Quais são os níveis de combinações no Style?')">Quais são os níveis de combinações no Style?</li>
+                    <li onclick="handleOptionClick('Quem criou o Style?')">Quem criou o Style?</li>
+                    <li onclick="handleOptionClick('Quais são os principais recursos do Style?')">Quais são os principais recursos do Style?</li>
+                </ul>
+            </div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Digite sua mensagem aqui...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+    <script src="bot.js"></script>
+</body>
+</html>
